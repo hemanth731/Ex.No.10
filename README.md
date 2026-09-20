@@ -1,66 +1,504 @@
-# Ex.No.10
-Content Creation (Reports, Articles, Case Studies, etc.) Using Prompt Patterns
+# Ex.No.10 — Content Creation Using Prompt Patterns *(Alternate Scenarios)*
 
-## Date:
-## Reg. No.
+![Experiment](https://img.shields.io/badge/Experiment-Ex.No.10-blue)
+![Scenario 1](https://img.shields.io/badge/Scenario%201-Product%20Launch%20Announcement-orange)
+![Scenario 2](https://img.shields.io/badge/Scenario%202-Documentary%20Interview%20Transcript-8A2BE2)
+![Project](https://img.shields.io/badge/Project-Civil%20Cost%20Pro-2E8B57)
 
-## Aim:
-To demonstrate how various prompting techniques (query decomposition, decision-making, semantic filtering, etc.) can be employed to create content such as reports, articles, case studies, or creative works like comic books, using ChatGPT or similar models. The objective is to highlight how different prompt structures affect the content's quality, coherence, and structure.
+| | |
+|---|---|
+| **Ex.No.** | 10 |
+| **Date** | `__ / __ / 2026` |
+| **Reg. No.** | `__________________` |
+| **Source material** | Project Phase-1 Report: *AI-Powered Framework for Construction Cost Estimation and Embodied Carbon Optimisation in Residential Building* |
+| **AI model used** | Claude (Anthropic) |
 
-## Procedure:
-1.	Introduction to Prompt Patterns: Begin by understanding the following prompt patterns:
-○	Query Decomposition: Breaking down complex queries into smaller, actionable parts.
-○	Decision Making: Asking the model to choose between options or directions.
-○	Answer Engineering: Refining outputs by giving detailed instructions on how to structure or format the answer.
-○	Fact Check List: Ensuring the content is factually accurate, especially for reports or case studies.
-○	Tail Generation: Extending the content logically to create depth in storytelling or analysis.
-○	Menu Actions: Presenting multiple action choices and guiding the AI to select one.
-○	Semantic Filter: Applying filters to control the tone, style, and accuracy of the content.
-2.	Choosing the Content Type: Decide on the type of content you want to create. This could be:
-○	Reports (e.g., industry analysis, sustainability reports, etc.)
-○	Case Studies (e.g., business solutions, technological innovations)
-○	Articles (e.g., opinion pieces, educational articles)
-○	Creative Content (e.g., comic book story, short stories, video scripts)
-3.	For example, you could choose a business report on market trends, a case study on a successful startup, or even a story-based prompt like creating a fictional world for a comic.
-4.	Creating the Prompts:
-○	Start with simple prompts to generate initial content.
-○	Gradually refine the prompts, moving toward more complex techniques like decision-making (asking the model to pick one of several options), tail generation (extending the narrative), and semantic filtering (adjusting style or tone).
-5.	Generating and Refining Outputs: Use the model to generate initial drafts, and then refine the outputs using iterative adjustments:
-○	For a report, prompt the model with basic data, then ask for a deeper analysis and insights.
-○	For creative content, refine the initial story idea with specific details on characters, settings, or actions.
-6.	Review and Evaluation: After generating content, evaluate the outputs for:
-○	Coherence: Is the generated content logical and structured?
-○	Creativity/Originality: Is the content engaging and fresh?
-○	Accuracy: Is the content factually accurate (for reports and case studies)?
-○	Tone and Style: Does the content match the intended tone (formal, creative, educational)?
-________________________________________
-Test Case Scenarios for Content Generation: (USE ANY 2)
-content generation scenarios:
-1.	Business Report on Market Trends
-2.	Case Study on Business Success
-3.	Article on Climate Change
-4.	Creative Writing - Sci-Fi Short Story
-5.	Educational Report on Renewable Energy
-6.	Product Launch Announcement
-7.	Travel Blog Post
-8.	Research Paper on Artificial Intelligence
-9.	Interview Transcript for Documentary
-10.	Sustainability Practices in Fashion
-11.	How to Build an E-commerce Website
-12.	Social Issue Awareness Campaign
-13.	Artificial Intelligence Impact on Healthcare
-## Instructions:
-1.	Select a Topic: Choose a topic (e.g., market trends, climate change, sci-fi story) that interests you.
-2.	Use Basic Prompts: Start by crafting simple, general prompts to generate initial content.
-3.	Refine Your Prompts: Gradually introduce more complexity by adding details, refining the structure, and using different prompt techniques like decision making or semantic filtering.
-4.	Evaluate the Output: Review the generated content for clarity, creativity, and accuracy.
-5.	Iterate for Improvement: Based on the feedback, refine the prompts and regenerate the content as needed.
+---
 
-## Deliverables:
-1.	First Draft: A basic draft of the report, case study, article, or story generated using simple prompts.
-2.	Refined Content: A more detailed and structured output, achieved by applying more advanced prompt techniques.
-3.	Multiple Versions: Different versions of the content, showing the effect of prompt changes on the output.
-4.	Final Version: The polished version of the content after incorporating feedback and refining the prompts.
+## Table of Contents
 
-## Conclusion:
-By applying various prompting techniques, you can generate high-quality content for a wide range of use cases, from business reports and case studies to creative works like short stories and articles. This experiment demonstrates how structured prompting can guide AI models like ChatGPT to create coherent, accurate, and engaging outputs tailored to specific needs.
+1. [Aim](#1-aim)
+2. [Prompt Patterns Used](#2-prompt-patterns-used)
+3. [Fact Sheet Supplied to the Model](#3-fact-sheet-supplied-to-the-model)
+4. [Scenario 1 — Product Launch Announcement](#4-scenario-1--product-launch-announcement)
+5. [Scenario 2 — Interview Transcript for a Documentary](#5-scenario-2--interview-transcript-for-a-documentary)
+6. [Comparison of Versions](#6-comparison-of-versions)
+7. [Review and Evaluation](#7-review-and-evaluation)
+8. [Deliverables Checklist](#8-deliverables-checklist)
+9. [Conclusion](#9-conclusion)
+
+---
+
+## 1. Aim
+
+To show how prompt patterns (query decomposition, decision making, answer engineering, fact check list, tail generation, menu actions, semantic filter) shape the quality, coherence and structure of AI-generated content. This alternate set covers one **business/marketing** piece and one **creative** piece, both based on my project *Civil Cost Pro*.
+
+## 2. Prompt Patterns Used
+
+| # | Pattern | Purpose | Used in |
+|---|---|---|---|
+| P1 | Basic prompt (baseline) | One-line request | Scenario 1 & 2 |
+| P2 | Query Decomposition | Break the task into ordered sub-tasks | Scenario 2 |
+| P3 | Answer Engineering | Fix structure, length, format | Scenario 1 & 2 |
+| P4 | Fact Check List | Verify every claim against the report | Scenario 1 & 2 |
+| P5 | Semantic Filter | Control tone, style, forbidden words | Scenario 1 & 2 |
+| P6 | Tail Generation | Extend logically for depth | Scenario 1 & 2 |
+| P7 | Decision Making | Choose between options with reasons | Scenario 1 |
+| P8 | Menu Actions | Model offers actions, user selects | Scenario 1 |
+
+```mermaid
+flowchart LR
+    A[Topic] --> B[Basic prompt: Draft v1]
+    B --> C[Menu / Decompose / Decide]
+    C --> D[Answer Engineering: Draft v2]
+    D --> E[Fact Check List]
+    E --> F[Semantic Filter: versions]
+    F --> G[Tail Generation]
+    G --> H[Final Version]
+```
+
+## 3. Fact Sheet Supplied to the Model
+
+<details>
+<summary><b>Click to expand</b></summary>
+
+- **Product:** Civil Cost Pro — "Estimate smart. Build green." Web tool for residential buildings in India, G+0 to G+5.
+- **Workflow:** 4 steps — Location → Area & Floors → Quality (Economy / Standard / Premium) → Results.
+- **Data:** 20 materials, 130+ Indian cities with cost and emission indices, 3 Bills of Quantities.
+- **Engine:** BOQ-based cost and embodied-carbon calculation; labour and overhead = 38 % of cost.
+- **AI:** Random Forest benchmark (R² 0.94 cost, 0.89 carbon), labelled "AI Benchmark"; trained on 120 records generated by the engine.
+- **Optimisation:** Low / Recommended / High slider; fly-ash concrete, fly-ash/AAC blocks, blended cement, optimised steel detailing, less aluminium and glass.
+- **Results page:** phase-wise cost and carbon charts, reduction tips, print, PDF report, share.
+- **Demo run (Chennai, 3,500 sq.ft per floor, G+2, Standard):** ₹1.89 Cr, ₹1,804 per sq.ft, 249.63 t CO₂e; Recommended optimisation → 201.78 t (−19.2 %), saving ₹21.84 L.
+- **Case study (Chennai, 2,400 sq.ft per floor, G+1, Standard):** ₹86,61,430; 114.12 t CO₂e → 92.24 t (−19.2 %), saving ₹9.98 L.
+- **Emission factors (kg CO₂e):** cement 0.82/kg, steel 1.85/kg, fly-ash concrete 0.05/kg vs concrete 0.11/kg.
+- **Limitations:** static indices, no operational carbon, small generated dataset.
+
+</details>
+
+---
+
+## 4. Scenario 1 — Product Launch Announcement
+
+**Content type:** Business / marketing content
+**Audience:** Home builders, civil engineers, architects
+
+### Step 1 — Basic prompt (P1) → **First Draft (v1)**
+
+```text
+Write a product launch announcement for my construction cost estimation app.
+```
+
+<details>
+<summary><b>Output — Draft v1</b></summary>
+
+> We are thrilled to announce the launch of our revolutionary construction cost estimation app! Our cutting-edge tool uses advanced AI to give you the most accurate estimates ever. Say goodbye to guesswork and hello to smarter building. Try it today and transform the way you build!
+
+</details>
+
+**Observation:** Pure hype. No product name, no features, no numbers, and "most accurate ever" cannot be supported.
+
+---
+
+### Step 2 — Menu Actions (P8)
+
+```text
+Before writing, give me a numbered menu of announcement formats you can produce for this product.
+Wait for my choice.
+```
+
+<details>
+<summary><b>Output — menu</b></summary>
+
+> 1. Press release (formal, 300 words)
+> 2. LinkedIn post for engineers (short, professional)
+> 3. Landing-page hero section
+> 4. Email to college faculty / project reviewers
+> 5. FAQ section
+
+**My choice:** 1 (press release) as the main piece, 2 later as a filtered version, and 5 as a tail section.
+
+</details>
+
+---
+
+### Step 3 — Decision Making (P7) → **Refined Content**
+
+```text
+Choose ONE headline angle for the press release and justify it in under 60 words:
+A) "AI-powered cost estimator for homes"
+B) "First tool to estimate cost and carbon together"
+C) "Estimate the cost and the carbon of your home in four steps"
+Rule: the headline must be defensible using only my project report.
+```
+
+<details>
+<summary><b>Output — decision</b></summary>
+
+| Option | Defensible from the report? | Risk |
+|---|---|---|
+| A | Partly: the engine is deterministic, the AI is only a benchmark | Overstates the role of AI |
+| B | **No.** The report has not surveyed every tool, so "first" cannot be proven | Unsupported superlative |
+| C | **Yes.** Four-step wizard, cost and carbon both output | None |
+
+**Decision: Option C.** It is specific, describes what the tool does, and every word is supported by the report.
+
+</details>
+
+---
+
+### Step 4 — Answer Engineering (P3) → **Structured Draft (v2)**
+
+```text
+Write the press release using headline C. Format: headline, dateline, 2-sentence lead, "Key features" as 5 bullets,
+one paragraph with the demo numbers, one quote-free closing paragraph, and a boilerplate.
+Max 300 words. Use only the fact sheet. Do not use the words "revolutionary", "cutting-edge", "most accurate" or "first".
+```
+
+<details>
+<summary><b>Output — Draft v2</b></summary>
+
+> # Estimate the Cost and the Carbon of Your Home in Four Steps
+> **Chennai, September 2026** — Civil Cost Pro, a web-based decision-support tool for residential construction in India, is now available as a project prototype. It calculates construction cost and embodied carbon together, so owners can compare options before construction begins.
+>
+> **Key features**
+> - Four-step interface: Location, Area & Floors, Quality, Results
+> - City-specific cost and emission indices for 130+ Indian cities
+> - Bill-of-Quantities-based estimates for Economy, Standard and Premium quality
+> - Phase-wise cost and carbon breakdowns with charts
+> - Optimisation slider (Low, Recommended, High) with material recommendations
+>
+> In a demo run for a G+2 Standard-quality house in Chennai (3,500 sq.ft per floor), the tool estimated ₹1.89 crore and 249.63 t CO₂e. Applying the Recommended optimisation level reduced the carbon footprint by 19.2 % to 201.78 t CO₂e and the estimated cost by ₹21.84 lakh.
+>
+> An AI benchmark based on a Random Forest model is displayed alongside the engineering estimate for comparison. Results can be printed, shared or downloaded as a PDF report.
+>
+> **About the project.** Civil Cost Pro was developed as a Civil Engineering Project Phase-1 work at Saveetha Engineering College, Anna University, Chennai.
+
+</details>
+
+---
+
+### Step 5 — Fact Check List (P4)
+
+```text
+Check every claim in the press release against my report. Flag anything unsupported or misleading.
+```
+
+<details>
+<summary><b>Output — fact check</b></summary>
+
+| # | Claim | Source | Status |
+|---|---|---|---|
+| 1 | Four-step interface | Section 3.7.1 | ✅ Verified |
+| 2 | 130+ cities | Section 3.3.2 | ✅ Verified |
+| 3 | G+0 to G+5 supported | Section 4.3 (Step 2) | ✅ Verified (Chapter 3 text says G to G+6, so keep to the UI range) |
+| 4 | ₹1.89 Cr, 249.63 t for the demo run | Fig 4.4 | ✅ Verified |
+| 5 | Carbon −19.2 %, ₹21.84 L saved | Fig 4.4 | ✅ Verified. The interface labels the cost change "−18.6 %", but 21.84 ÷ 189.47 = 11.5 % of total cost. Percentage omitted from the release to avoid a mismatch. |
+| 6 | "AI benchmark" shown beside the engineering estimate | Section 3.5.4 | ✅ Verified |
+| 7 | Print, share, PDF report | Section 3.7.1 | ✅ Verified |
+| 8 | "Available as a project prototype" | Report is a Phase-1 report | ✅ Accurate. "Available" should not imply a public commercial release. |
+| 9 | Any accuracy claim | R² is measured against engine-generated data | ⚠️ Not made in the release. Correct decision. |
+
+</details>
+
+---
+
+### Step 6 — Semantic Filter (P5) → **Multiple Versions**
+
+```text
+Rewrite the press release as (A) a LinkedIn post for civil engineers, max 80 words, professional, 2 hashtags;
+(B) a one-line email subject plus 3-line email for the project coordinator, respectful and formal.
+Keep all numbers unchanged. No superlatives.
+```
+
+<details>
+<summary><b>Version A — LinkedIn</b></summary>
+
+> Early-stage estimates usually ignore carbon. Our Phase-1 project, Civil Cost Pro, calculates cost and embodied carbon together for G+0 to G+5 homes across 130+ Indian cities. In a Chennai G+2 demo, the Recommended optimisation level cut estimated embodied carbon by 19.2 % (249.63 → 201.78 t CO₂e). Feedback from engineers is welcome. #SustainableConstruction #CivilEngineering
+
+</details>
+
+<details>
+<summary><b>Version B — Email</b></summary>
+
+> **Subject:** Civil Cost Pro — Phase-1 prototype ready for review
+>
+> Respected Madam, our Phase-1 prototype, Civil Cost Pro, is ready for review. It estimates cost and embodied carbon for G+0 to G+5 residential buildings and includes a Random Forest benchmark and a three-level optimisation module. The Chennai case study shows a 19.2 % carbon reduction (114.12 to 92.24 t CO₂e). Kindly let us know a convenient time for a demonstration.
+
+</details>
+
+---
+
+### Step 7 — Tail Generation (P6) → **Depth**
+
+```text
+Extend the release with a 4-question FAQ (max 120 words total). Answers must state limitations honestly.
+```
+
+<details>
+<summary><b>Output — FAQ</b></summary>
+
+> **Is the AI making the estimate?** No. The engineering (BOQ) calculation is primary. The AI model is a benchmark for comparison.
+> **How current are the prices?** Cost and emission indices are static values from secondary data, so check local rates.
+> **Does it include operational carbon?** No. Only embodied carbon of construction materials is covered.
+> **Has the AI been validated on real projects?** Not yet. It was trained on 120 records generated by the engine.
+
+</details>
+
+---
+
+### ✅ Final Version — Scenario 1
+
+> # Estimate the Cost and the Carbon of Your Home in Four Steps
+> **Chennai, September 2026** — Civil Cost Pro, a web-based decision-support tool for residential construction in India, is now available as a project prototype. It calculates construction cost and embodied carbon together, so owners can compare options before construction begins.
+>
+> **Key features**
+> - Four-step interface: Location, Area & Floors, Quality, Results
+> - City-specific cost and emission indices for 130+ Indian cities
+> - Bill-of-Quantities-based estimates for Economy, Standard and Premium quality
+> - Phase-wise cost and carbon breakdowns with charts
+> - Three-level optimisation slider (Low, Recommended, High) with material recommendations
+>
+> In a demo run for a G+2 Standard-quality house in Chennai (3,500 sq.ft per floor), the tool estimated ₹1.89 crore and 249.63 t CO₂e. The Recommended optimisation level reduced carbon by 19.2 % to 201.78 t CO₂e and the estimated cost by ₹21.84 lakh. Results can be printed, shared or downloaded as a PDF report.
+>
+> **Frequently asked questions**
+> - **Is the AI making the estimate?** No. The engineering (BOQ) calculation is primary; the Random Forest model is a benchmark for comparison.
+> - **How current are the prices?** Indices are static, derived from secondary data. Check local rates.
+> - **Does it include operational carbon?** No, only embodied carbon of construction materials.
+> - **Has the AI been validated on real projects?** Not yet. It was trained on 120 records generated by the engine.
+>
+> **About the project.** Developed as a Civil Engineering Project Phase-1 work at Saveetha Engineering College, Anna University, Chennai.
+
+---
+
+## 5. Scenario 2 — Interview Transcript for a Documentary
+
+**Content type:** Creative / narrative content
+**Audience:** Viewers of a short educational documentary, *"The Carbon in the Concrete"*
+**Note:** The speakers are **fictional** (a documentary host and a site engineer). The facts they mention come from the project report.
+
+### Step 1 — Basic prompt (P1) → **First Draft (v1)**
+
+```text
+Write an interview transcript for a documentary about sustainable construction.
+```
+
+<details>
+<summary><b>Output — Draft v1</b></summary>
+
+> **Interviewer:** Why is sustainable construction important?
+> **Engineer:** It helps the planet and saves energy. We should use eco-friendly materials.
+> **Interviewer:** Thank you for your time.
+
+</details>
+
+**Observation:** Three lines, no character, no story, no evidence. It does not sound like a real conversation.
+
+---
+
+### Step 2 — Query Decomposition (P2) → **Refined Content**
+
+```text
+Do not write the transcript yet. Break the documentary interview into 6 segments (hook, concept, the numbers,
+the surprise, the solution, the honest limit). For each, give a one-line goal and the fact from my report it will use.
+```
+
+<details>
+<summary><b>Output — interview plan</b></summary>
+
+| Segment | Goal | Fact used |
+|---|---|---|
+| 1. Hook | Make viewers realise a house has a carbon cost before it is lived in | Embodied carbon released during material manufacture |
+| 2. Concept | Define embodied carbon simply | Cement 0.82 and steel 1.85 kg CO₂e per kg |
+| 3. The numbers | Give a real example | Chennai G+1 house: 114.12 t CO₂e |
+| 4. The surprise | Show where it sits | Foundation 50.5 %, RCC frame 24.3 % |
+| 5. The solution | Show what can change | Fly-ash concrete 0.05 vs 0.11; optimisation −19.2 % carbon |
+| 6. Honest limit | Avoid overselling | Static indices, no operational carbon, small generated dataset |
+
+</details>
+
+---
+
+### Step 3 — Answer Engineering (P3) → **Structured Draft (v2)**
+
+```text
+Write the transcript following the 6 segments. Speakers: Host (Meera) and Site Engineer (Arun), both fictional.
+Format: script style with [B-ROLL] cues, max 350 words, natural spoken language, one analogy, no invented statistics.
+```
+
+<details>
+<summary><b>Output — Draft v2</b></summary>
+
+> **[B-ROLL: cement bags being unloaded at a site]**
+> **MEERA:** Arun, a house is not built yet, and you say it already has a carbon bill?
+> **ARUN:** Yes. Cement and steel are made in kilns and furnaces. That releases carbon before a single brick is laid. We call it embodied carbon.
+> **MEERA:** How much are we talking about?
+> **ARUN:** Cement is about 0.82 kilograms of CO₂e for every kilogram. Steel is 1.85. For a two-storey house in Chennai, our estimate came to 114.12 tonnes.
+> **[B-ROLL: foundation excavation]**
+> **MEERA:** Where does most of it come from?
+> **ARUN:** Half of it, 50.5 percent, comes from the foundation phase. Another 24.3 percent from the concrete frame with its steel.
+> **MEERA:** So the part nobody sees is the heaviest?
+> **ARUN:** Exactly, like an iceberg.
+> **MEERA:** Can it be reduced?
+> **ARUN:** Fly-ash concrete has an emission factor of 0.05 compared with 0.11 for normal concrete. With such swaps and leaner quantities, the estimate dropped 19.2 percent.
+> **MEERA:** Any catch?
+> **ARUN:** Yes. Our prices are static and we only count material carbon, not the energy used once people live there.
+
+</details>
+
+---
+
+### Step 4 — Fact Check List (P4)
+
+```text
+List every factual statement Arun makes and check it against my project report.
+```
+
+<details>
+<summary><b>Output — fact check</b></summary>
+
+| # | Statement | Source | Status |
+|---|---|---|---|
+| 1 | Cement 0.82, steel 1.85 kg CO₂e/kg | Table 3.1 | ✅ Verified |
+| 2 | 114.12 t for a two-storey Chennai house | Table 4.3 | ✅ Verified |
+| 3 | Foundation phase = 50.5 %, RCC = 24.3 % | Table 4.5 | ✅ Verified, but it is a model output based on material-to-phase mapping, so Arun should say "our estimate shows" |
+| 4 | Fly-ash concrete 0.05 vs 0.11 | Table 3.1 | ✅ Verified |
+| 5 | 19.2 % reduction | Table 4.6 | ✅ Verified |
+| 6 | "Cement and steel are made in kilns and furnaces" | General knowledge, not in the report | ⚠️ Plausible but not from the report, so it should be checked against a cited source before broadcast |
+| 7 | Static prices; operational carbon excluded | Section 4.5 | ✅ Verified |
+
+</details>
+
+---
+
+### Step 5 — Semantic Filter (P5) → **Multiple Versions**
+
+```text
+Rewrite Arun's lines twice:
+Version A (Documentary): warm, spoken, short sentences, one analogy, no numbers with more than 3 digits.
+Version B (Technical seminar): precise, formal, includes units and the phrase "under the model's assumptions".
+```
+
+<details>
+<summary><b>Version A — Documentary voice</b></summary>
+
+> **ARUN:** Think of it like a hidden receipt. Before anyone moves in, the cement and steel have already left a carbon bill. In our Chennai example, that bill is about a hundred and fourteen tonnes. And half of it sits in the foundation, in the part you never see.
+
+</details>
+
+<details>
+<summary><b>Version B — Technical seminar</b></summary>
+
+> **ARUN:** Under the model's assumptions, the G+1 Standard-quality case study yields 114.12 t CO₂e, of which Foundation and Basement contributes 50.5 % and the RCC frame 24.3 %, driven by cement (0.82 kg CO₂e/kg) and steel (1.85 kg CO₂e/kg). Replacing normal concrete (0.11 kg CO₂e/kg) with fly-ash concrete (0.05 kg CO₂e/kg) forms part of a set of measures giving a 19.2 % reduction.
+
+</details>
+
+---
+
+### Step 6 — Tail Generation (P6) → **Depth**
+
+```text
+Continue the interview with a closing exchange (max 90 words) where Meera asks what a first-time home builder should do,
+and Arun answers using the Low / Recommended / High optimisation levels. End with a one-line narrator sign-off.
+```
+
+<details>
+<summary><b>Output — closing exchange</b></summary>
+
+> **MEERA:** What should a first-time home builder do?
+> **ARUN:** Ask for a carbon-conscious bill of quantities. Our tool has three levels: Low, Recommended and High. Recommended keeps ninety percent of the cement and ninety-two percent of the steel, and switches to fly-ash blocks and concrete.
+> **MEERA:** And the cost?
+> **ARUN:** In our case study it did not go up. But check local prices first.
+> **NARRATOR (V.O.):** *The greenest brick is the one you did not have to make.*
+
+</details>
+
+---
+
+### ✅ Final Version — Scenario 2
+
+> ## THE CARBON IN THE CONCRETE — Interview Transcript *(dramatised; speakers are fictional)*
+>
+> **[B-ROLL: cement bags being unloaded at a site]**
+>
+> **MEERA:** Arun, the house isn't even built, and you say it already has a carbon bill?
+>
+> **ARUN:** Think of it as a hidden receipt. Cement and steel are made in kilns and furnaces, and that releases carbon before a single brick is laid. We call it embodied carbon.
+>
+> **MEERA:** How big is that receipt?
+>
+> **ARUN:** In our model, cement carries 0.82 kilograms of CO₂e per kilogram, and steel 1.85. For a two-storey house in Chennai, the estimate came to about 114 tonnes.
+>
+> **[B-ROLL: foundation excavation]**
+>
+> **MEERA:** Where does most of it sit?
+>
+> **ARUN:** Our estimate shows about half, 50.5 percent, in the foundation phase, and another 24 percent in the concrete frame.
+>
+> **MEERA:** So the part nobody sees is the heaviest?
+>
+> **ARUN:** Like an iceberg.
+>
+> **MEERA:** Can it be reduced?
+>
+> **ARUN:** Fly-ash concrete has a factor of 0.05, against 0.11 for normal concrete. With such swaps and leaner quantities, our estimate fell by 19.2 percent.
+>
+> **MEERA:** What should a first-time builder do?
+>
+> **ARUN:** Ask for a carbon-conscious bill of quantities. Our tool has Low, Recommended and High levels. Recommended keeps 90 percent of the cement and 92 percent of the steel, and moves to fly-ash blocks and concrete.
+>
+> **MEERA:** And the cost?
+>
+> **ARUN:** In our case study it didn't go up. But check local prices first.
+>
+> **MEERA:** Any catch?
+>
+> **ARUN:** Yes. Our prices are static, we count only material carbon and not the energy used once people live there, and our AI model was trained on generated data, not real projects yet.
+>
+> **NARRATOR (V.O.):** *The greenest brick is the one you did not have to make.*
+
+---
+
+## 6. Comparison of Versions
+
+| Scenario | Version | Technique | Length | Evidence | Structure | Weakness |
+|---|---|---|---|---|---|---|
+| 1 Launch | v1 | Basic (P1) | ~45 words | None | None | Hype, unsupported claims |
+| 1 Launch | Decision | P7 | Table | Reasoned | Comparison | Not yet a release |
+| 1 Launch | v2 | P8 + P3 | ~230 words | From report | Press-release format | No limitations stated |
+| 1 Launch | LinkedIn / Email | P5 | 60 / 65 words | Unchanged | Short forms | Channel-specific |
+| 1 Launch | **Final** | P3 + P4 + P5 + P6 + P7 + P8 | ~290 words | Verified | Release + FAQ | – |
+| 2 Interview | v1 | Basic (P1) | ~30 words | None | 3 lines | Lifeless |
+| 2 Interview | Plan | P2 | 6-row table | Mapped to facts | Story arc | Not a script |
+| 2 Interview | v2 | P3 | ~230 words | From report | Script + B-roll | Unchecked general claim |
+| 2 Interview | Documentary / Seminar | P5 | 50 / 60 words | Unchanged | Two registers | Partial |
+| 2 Interview | **Final** | P2 + P3 + P4 + P5 + P6 | ~330 words | Verified | Full script | – |
+
+**Takeaways:** the basic prompt gave a plausible but empty piece in both cases. Decision making removed an unsupportable headline ("first tool…"). Decomposition gave the interview an arc. Fact checking removed hype and forced honest limitations. Filters changed voice without changing data.
+
+## 7. Review and Evaluation
+
+| Content | Coherence | Creativity | Accuracy | Tone & Style |
+|---|:-:|:-:|:-:|:-:|
+| Launch v1 | 2 | 1 | 1 | 2 |
+| Launch v2 | 4 | 3 | 4 | 4 |
+| **Launch final** | **5** | **4** | **5** | **5** |
+| Interview v1 | 1 | 1 | 2 | 1 |
+| Interview v2 | 4 | 4 | 4 | 4 |
+| **Interview final** | **5** | **5** | **5** | **5** |
+
+## 8. Deliverables Checklist
+
+- [x] **First Draft** — Launch v1 and Interview v1
+- [x] **Refined Content** — decision table, menu, interview plan, v2 drafts
+- [x] **Multiple Versions** — LinkedIn, email, documentary and seminar versions
+- [x] **Final Version** — press release with FAQ and full interview script
+- [x] **All 8 prompt patterns demonstrated**
+
+## 9. Conclusion
+
+Applying prompt patterns turned single-line requests into content that is structured, tone-appropriate and traceable to the project report. Decision making and decomposition set the logic, answer engineering fixed the format, the fact check list removed unsupported claims, filters adapted the voice to each audience, and tail generation added depth. The experiment confirms that structured prompts, not just the model, determine content quality.
+
+---
+
+**Result:** The experiment on content creation using prompt patterns was completed successfully.
